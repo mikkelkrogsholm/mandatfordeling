@@ -1,0 +1,48 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+# mandatfordeling
+
+Målet med mandatfordeling er at gøre det nemt at beregne mandatfordelinger ved Folketingsvalg i Danmark.
+Denne pakke udregner mandatfordelingen på storkredsniveau med både kredsmandater og tillægsmandater. Den skal bruge stemmetal på storkredsniveau for at regne det ud. Se eksempler i neden for
+
+## Installation
+
+Du kan installere mandatfordeling fra github således:
+
+```{r gh-installation, eval = FALSE}
+# install.packages("devtools")
+devtools::install_github("mikkelkrogsholm/mandatfordeling")
+```
+
+## Eksempel
+
+```{r load_pakke}
+library(mandatfordeling)
+```
+
+```{r storkreds_res}
+# Pakken loader også data - lad os se på strukturen på vores input
+dplyr::glimpse(storkreds_res)
+```
+
+```{r}
+# Lad os beregne mandatfordelingen
+ft15 <- beregn_mandater(storkreds_res)
+
+# Og se på output
+dplyr::glimpse(ft15)
+```
+
+

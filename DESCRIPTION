@@ -1,7 +1,7 @@
 Package: mandatfordeling
 Title: Udregner mandatfordeling ved Folketingsvalg 
 Version: 0.0.1
-Authors@R: person("Mikkel", "Freltoft" , "Krogsholm", email = "mikkel@56n.dk", role = c("aut", "cre"))
+Authors@R: person("Mikkel Freltoft", "Krogsholm", email = "mikkel@56n.dk", role = c("aut", "cre"))
 Description: Denne pakke udregner mandatfordelingen på storkredsniveau med både
     kredsmandater og tillægsmandater. Den skal bruge stemmetal på storkredsniveau 
     for at regne det ud. Se eksempler i readme.
@@ -9,3 +9,10 @@ Depends: R (>= 3.4.1)
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 6.0.1
+Imports:
+    magrittr,
+    dplyr,
+    purrr,
+    tidyr,
+    tibble
